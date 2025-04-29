@@ -71,12 +71,45 @@ Content-Type: application/json
 ```
 ![Test avec Postman**](./assets/a.png)
 
+### Récupérer les tâches
+```bash
+GET http://localhost:3000/tasks
+```
+![Test avec Postman**](./assets/b.png)
 
+### Supprimer une tâche
+```bash
+DELETE http://localhost:3000/tasks/1714412030000
+```
+![Test avec Postman**](./assets/d.png)
 
+### Apres Supprimer une tâche j'affiche les taches
+```bash
+GET http://localhost:3000/tasks
+```
+![Test avec Postman**](./assets/e.png)
 
+### Modifier le statut
+```bash
+PATCH http://localhost:3000/tasks/1745964235419
+Content-Type: application/json
 
+{
+  "status": "done"
+}
+```
+![Test avec Postman**](./assets/f.png)
 
+### Remarques
+```bash
+Toutes les tâches sont stockées en mémoire. Aucune base de données n'est utilisée.
+
+Les ID sont générés automatiquement à partir de Date.now().
+
+Le backend fonctionne parfaitement et a été testé manuellement avec Postman.
+```
 
 
 
 ##### FRONTEND
+#  Gestionnaire de Tâches - Backend
