@@ -1,6 +1,6 @@
 # gestion_de_taches
+
 # BACKEND
-#  Gestionnaire de Tâches - Backend
 
 Ce backend Node.js/Express fournit une API REST pour la gestion de tâches (CRUD). Il fonctionne indépendamment du frontend et stocke les données temporairement en mémoire.
 
@@ -110,5 +110,4 @@ Content-Type: application/json
 ![Test avec Postman**](./assets/f.png)
 
 # FRONTEND
-#  Gestionnaire de Tâches - Backend
 
