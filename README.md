@@ -1,5 +1,5 @@
 # gestion_de_taches
-##### BACKEND
+# BACKEND
 #  Gestionnaire de Tâches - Backend
 
 Ce backend Node.js/Express fournit une API REST pour la gestion de tâches (CRUD). Il fonctionne indépendamment du frontend et stocke les données temporairement en mémoire.
@@ -58,6 +58,15 @@ status: "pending" ou "done"
 
 ```
 
+### Remarques
+```bash
+Toutes les tâches sont stockées en mémoire. Aucune base de données n'est utilisée.
+
+Les ID sont générés automatiquement à partir de Date.now().
+
+Le backend fonctionne parfaitement et a été testé manuellement avec Postman.
+```
+
 ### Créer une tâche
 ```bash
 POST http://localhost:3000/tasks
@@ -100,16 +109,6 @@ Content-Type: application/json
 ```
 ![Test avec Postman**](./assets/f.png)
 
-### Remarques
-```bash
-Toutes les tâches sont stockées en mémoire. Aucune base de données n'est utilisée.
-
-Les ID sont générés automatiquement à partir de Date.now().
-
-Le backend fonctionne parfaitement et a été testé manuellement avec Postman.
-```
-
-
-
-##### FRONTEND
+# FRONTEND
 #  Gestionnaire de Tâches - Backend
+
