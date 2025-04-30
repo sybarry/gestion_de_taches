@@ -1,10 +1,20 @@
-# gestion_de_taches
+# GESTION DE TACHE
+% # **********************************************************************************
+% # Projet          : Gestion de Taches                                              *
+% # Date ouverture  : Jeudi 24 avril 2025 à 11:13                                    *
+% # Date à remettre : Juin                                                           *
+% # Réaliser par    : BARRY Saikou yaya Master 2 Architecture Logicielle             *
+% # Email           : saikouyaya110@gmail.com                                        *
+% # **********************************************************************************
+
+Développeur Fullstack (React +
+TypeScript)
 
 # BACKEND
 
 Ce backend Node.js/Express fournit une API REST pour la gestion de tâches (CRUD). Il fonctionne indépendamment du frontend et stocke les données temporairement en mémoire.
 
-## Architecture du projet
+## Structure du backend
 
 ``` bash
 .
@@ -107,7 +117,7 @@ Ce projet est l'interface frontend d'un gestionnaire de tâches développé avec
 - Axios (pour la communication avec l'API backend)
 - Vite (pour le bundling)
 
-##  Structure du projet
+##  Structure du frontend
 ```bash
 src/
 ├── App.tsx                # Composant principal
