@@ -1,14 +1,11 @@
 # GESTION DE TACHE
-% # *********************************************************************************
-% # Projet          : Gestion de Taches 
-% # Date ouverture  : Jeudi 24 avril 2025 à 11:13 
-% # Date à remettre : Juin
-% # Réaliser par    : BARRY Saikou yaya Master 2 Architecture Logicielle
-% # Email           : saikouyaya110@gmail.com
-% # *********************************************************************************
 
-Développeur Fullstack (React +
-TypeScript)
+Projet          : Gestion de Taches 
+Date ouverture  : Jeudi 24 avril 2025 à 11:13 
+Date à remettre : Juin
+Réaliser par    : BARRY Saikou yaya Master 2 Architecture Logicielle
+Email           : saikouyaya110@gmail.com
+
 
 # BACKEND
 
