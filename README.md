@@ -20,19 +20,9 @@ Ce backend Node.js/Express fournit une API REST pour la gestion de tâches (CRUD
 │   └── app.ts                  # Point d'entrée de l'application
 ```
 
----
-
-##  Lancement du serveur
-
 ```bash
-# Installer les dépendances
-npm install
-
-# Lancer le serveur
-npm run dev
-```
-
 Le serveur démarre sur http://localhost:3000.
+```
 
 
 ## Endpoints disponibles
@@ -53,10 +43,16 @@ Chaque création ou mise à jour de tâche est validée via Zod pour garantir :
   - Description: chaîne non vide
   - Status: "pending" ou "done"
 
-### Remarques
-  - Toutes les tâches sont stockées en mémoire. Aucune base de données n'est utilisée.
-  - Les ID sont générés automatiquement à partir de Date.now().
-  - Le backend fonctionne parfaitement et a été testé manuellement avec Postman.
+##  Lancement du serveur
+
+```bash
+# Installer les dépendances
+npm install
+
+# Lancer le serveur
+npm run dev
+```
+
 
 ### Créer une tâche
 ```bash
@@ -111,18 +107,6 @@ Ce projet est l'interface frontend d'un gestionnaire de tâches développé avec
 - Axios (pour la communication avec l'API backend)
 - Vite (pour le bundling)
 
-##  Installation
-
-Assurez-vous d'avoir **Node.js** installé.
-```bash
-npm install
-```
-
-## Lancer l'application
-```bash
-npm start
-```
-
 ##  Structure du projet
 ```bash
 src/
@@ -141,6 +125,18 @@ src/
 Le frontend communique avec une API backend disponible par défaut à l’adresse :
 ```bash
 http://localhost:3000/tasks
+```
+
+##  Installation
+
+Assurez-vous d'avoir **Node.js** installé.
+```bash
+npm install
+```
+
+## Lancer l'application
+```bash
+npm start
 ```
 
 ## Fonctionnalités
