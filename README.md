@@ -145,15 +145,19 @@ http://localhost:3000/tasks
 
 ## Fonctionnalités
 
+```bash
 - Ajouter une nouvelle tâche
 ![Test avec Postman**](./assets/ajouter_une_tache1.png)
-
-
+```
+```bash
 - Lister toutes les tâches
 ![Test avec Postman**](./assets/avant_sup.png)
-
+```
+```bash
 - Modifier le statut d’une tâche (pending / done)
 ![Test avec Postman**](./assets/maj.png)
-
+```
+```bash
 - Supprimer une tâche
 ![Test avec Postman**](./assets/apres_sup.png)
+```
