@@ -148,20 +148,22 @@ http://localhost:3000/tasks
 ```bash
 - Ajouter une nouvelle tâche
 ```
-![Test avec Postman**](./assets/ajouter_une_tache1.png)
+![Test avec Postman**](./assets/ajouter_tache.png)
+![Test avec Postman**](./assets/ajouter_tache2.png)
 
 ```bash
 - Lister toutes les tâches
 ```
-![Test avec Postman**](./assets/avant_sup.png)
+![Test avec Postman**](./assets/ajouter_tache2.png)
+
 
 ```bash
 - Modifier le statut d’une tâche (pending / done)
 ```
-![Test avec Postman**](./assets/maj.png)
+![Test avec Postman**](./assets/modifier_tache.png)
 
 ```bash
 - Supprimer une tâche
 ```
-![Test avec Postman**](./assets/apres_sup.png)
+![Test avec Postman**](./assets/supprimer_tache.png)
 
