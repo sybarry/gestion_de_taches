@@ -8,8 +8,12 @@ export default function App() {
   const [tasks, setTasks] = useState<Task[]>([]);
 
   const loadTasks = async () => {
-    const response = await getTasks();
-    setTasks(response.data);
+    try {
+      const response = await getTasks();
+      setTasks(response.data);
+    } catch (error) {
+      console.error("Erreur lors du chargement des tâches :", error);
+    }
   };
 
   useEffect(() => {

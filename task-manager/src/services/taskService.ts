@@ -8,7 +8,7 @@ export const createTask = (task: Task): Task => {
   tasks.push(task);
   return task;
 };
-const API_URL = "http://localhost:3000/tasks";
+const API_URL = 'http://localhost:3000/tasks';
 
 
 export const deleteTask = (id: string): boolean => {

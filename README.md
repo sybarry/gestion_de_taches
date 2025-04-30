@@ -28,7 +28,7 @@ Ce backend Node.js/Express fournit une API REST pour la gestion de tâches (CRUD
 # Installer les dépendances
 npm install
 
-# Lancer le serveur en mode développement
+# Lancer le serveur
 npm run dev
 ```
 
@@ -49,23 +49,14 @@ DELETE  | /tasks/:id | Supprime une tâche par son ID |
 ## Validation des données
 Chaque création ou mise à jour de tâche est validée via Zod pour garantir :
 
-```bash
-title: chaîne non vide
-
-description: chaîne non vide
-
-status: "pending" ou "done"
-
-```
+  - Title: chaîne non vide
+  - Description: chaîne non vide
+  - Status: "pending" ou "done"
 
 ### Remarques
-```bash
-Toutes les tâches sont stockées en mémoire. Aucune base de données n'est utilisée.
-
-Les ID sont générés automatiquement à partir de Date.now().
-
-Le backend fonctionne parfaitement et a été testé manuellement avec Postman.
-```
+  - Toutes les tâches sont stockées en mémoire. Aucune base de données n'est utilisée.
+  - Les ID sont générés automatiquement à partir de Date.now().
+  - Le backend fonctionne parfaitement et a été testé manuellement avec Postman.
 
 ### Créer une tâche
 ```bash
@@ -111,3 +102,58 @@ Content-Type: application/json
 
 # FRONTEND
 
+Ce projet est l'interface frontend d'un gestionnaire de tâches développé avec **React + TypeScript**. Il permet à l'utilisateur d'ajouter, visualiser, modifier et supprimer des tâches via une API RESTful.
+
+## 🛠️ Technologies utilisées
+
+- React
+- TypeScript
+- Axios (pour la communication avec l'API backend)
+- Vite (pour le bundling)
+
+##  Installation
+
+Assurez-vous d'avoir **Node.js** installé.
+```bash
+npm install
+```
+
+## Lancer l'application
+```bash
+npm start
+```
+
+##  Structure du projet
+```bash
+src/
+├── App.tsx                # Composant principal
+├── index.tsx              # Point d'entrée
+├── components/
+│   ├── TaskForm.tsx       # Formulaire d'ajout de tâche
+│   └── TaskList.tsx       # Liste des tâches
+├── services/
+│   └── taskService.ts     # Requêtes API (GET, POST, DELETE, PATCH)
+└── types/
+    └── Task.ts            # Interface TypeScript pour une tâche
+```
+
+## Communication avec le backend
+Le frontend communique avec une API backend disponible par défaut à l’adresse :
+```bash
+http://localhost:3000/tasks
+```
+
+## Fonctionnalités
+
+- Ajouter une nouvelle tâche
+![Test avec Postman**](./assets/ajouter_une_tache1.png)
+
+
+- Lister toutes les tâches
+![Test avec Postman**](./assets/avant_sup.png)
+
+- Modifier le statut d’une tâche (pending / done)
+![Test avec Postman**](./assets/maj.png)
+
+- Supprimer une tâche
+![Test avec Postman**](./assets/apres_sup.png)

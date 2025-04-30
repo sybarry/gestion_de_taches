@@ -1,3 +1,4 @@
+import React from 'react';
 import { Task } from '../types/Task';
 import { deleteTask, updateTaskStatus } from '../services/taskService';
 
@@ -6,27 +7,34 @@ interface Props {
   onRefresh: () => void;
 }
 
-export default function TaskList({ tasks, onRefresh }: Props) {
+const TaskList: React.FC<Props> = ({ tasks, onRefresh }) => {
   const handleDelete = async (id: string) => {
     await deleteTask(id);
     onRefresh();
   };
 
-  const handleToggleStatus = async (task: Task) => {
+  const toggleStatus = async (task: Task) => {
     const newStatus = task.status === 'pending' ? 'done' : 'pending';
     await updateTaskStatus(task.id, newStatus);
     onRefresh();
   };
 
   return (
-    <ul>
-      {tasks.map(task => (
-        <li key={task.id}>
-          <strong>{task.title}</strong> - {task.description} ({task.status})
-          <button onClick={() => handleToggleStatus(task)}>Toggle Statut</button>
+    <div>
+      <h2>Liste des Tâches</h2>
+      {tasks.map((task) => (
+        <div key={task.id} style={{ border: '1px solid #ccc', margin: 5, padding: 5 }}>
+          <h3>{task.title}</h3>
+          <p>{task.description}</p>
+          <p>Statut: {task.status}</p>
+          <button onClick={() => toggleStatus(task)}>
+            Marquer comme {task.status === 'pending' ? 'fait' : 'non fait'}
+          </button>
           <button onClick={() => handleDelete(task.id)}>Supprimer</button>
-        </li>
+        </div>
       ))}
-    </ul>
+    </div>
   );
-}
+};
+
+export default TaskList;
