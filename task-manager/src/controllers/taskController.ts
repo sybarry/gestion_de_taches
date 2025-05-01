@@ -23,7 +23,7 @@ export const createNewTask = (req: Request, res: Response) => {
         if (error instanceof Error) {
         res.status(400).json({ error: error.message });
         } else {
-        res.status(400).json({ error: "An unknown error occurred" });
+        res.status(400).json({ error: "Une erreur inconnue s'est produite" });
         }
     }
       
