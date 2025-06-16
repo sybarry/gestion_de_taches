@@ -1,5 +1,5 @@
 import request from 'supertest';
-import { app }  from './app'; // ton fichier où tu déclares `const app = express()`
+import app from '../src/app'; // ton fichier où tu déclares `const app = express()`
 
 describe('GET /tasks', () => {
   it('should return 200 and an array', async () => {
