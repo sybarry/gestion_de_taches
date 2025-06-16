@@ -12,7 +12,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./backend
+        working-directory: ./task-manager
 
     steps:
     - name: Checkout repository
@@ -34,8 +34,8 @@ jobs:
 
     - name: Install frontend dependencies
       run: npm install
-      working-directory: ./frontend
+      working-directory: ./task-manager-frontend
 
     - name: Build frontend
       run: npm run build
-      working-directory: ./frontend
+      working-directory: ./task-manager-frontend
