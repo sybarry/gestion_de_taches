@@ -28,7 +28,7 @@ const TaskList: React.FC<Props> = ({ tasks, onRefresh }) => {
           <p>{task.description}</p>
           <p>Statut: {task.status}</p>
           <button onClick={() => toggleStatus(task)}>
-            Marquer comme {task.status === 'pending' ? 'fait' : 'non fait'}
+            Marquer comme : {task.status === 'pending' ? 'fait' : 'non fait'}
           </button>
           <button onClick={() => handleDelete(task.id)}>Supprimer</button>
         </div>

@@ -1,0 +1,41 @@
+name: gestion_de_taches
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./backend
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install backend dependencies
+      run: npm install
+
+    - name: Build backend
+      run: npm run build
+
+    - name: Test backend (si tu as des tests)
+      run: echo "Pas de tests pour l'instant"
+
+    - name: Install frontend dependencies
+      run: npm install
+      working-directory: ./frontend
+
+    - name: Build frontend
+      run: npm run build
+      working-directory: ./frontend
