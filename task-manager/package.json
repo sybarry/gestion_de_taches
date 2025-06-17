@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/app.ts",
-    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest --detectOpenHandles"
   },
   "keywords": [],
   "author": "",
